@@ -3,7 +3,7 @@
 JavaScript内のAjax通信でモデルオブジェクトをPOSTするサンプル
 
 ## Qiita
-
+[【jquery\-rails】AjaxでPOSTすると「Can't verify CSRF token authenticity\.」が発生する \- Qiita](https://qiita.com/NaokiIshimura/items/5824ae274d08af1de031)
 
 ## Model
 
