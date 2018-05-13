@@ -1,0 +1,45 @@
+<!--
+<hr>
+
+参考：
+<a href="https://www.walbrix.co.jp/blog/2013-08-jquery-json-post.html">jQueryでJSONをPOSTしてJSONのレスポンスを受け取る - ブログ -
+  ワルブリックス株式会社</a>
+
+<hr>
+-->
+
+<input type="text" id="name">
+<button id="create">post</button>
+
+<script>
+
+  $("#create").click(function () {
+
+    var data = {
+      "user":
+        {
+          name: $("#name").val()
+        }
+    };
+
+    $.ajax({
+      type: "post",
+      url: "<%= users_path %>",
+      data: JSON.stringify(data),
+      contentType: 'application/json',
+      dataType: "json",
+
+      success: function (data) {
+        console.log("success");
+        console.log(data);
+        $("#name").val("");
+      },
+
+      error: function (data) {
+        console.log("error");
+        console.log(data);
+      }
+    });
+  });
+
+</script>
